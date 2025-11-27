@@ -1,5 +1,5 @@
-Journal Title: A
+Journal Title: IEEE Transactions on Information Forensics & Security
 
-Title of the **Manuscript**: *A* 
+Title of the **Manuscript**: Knowledge Editing for Federated Client Online Unlearning
 
-Authors: Anonymous submission
+Authors: Rong Xie, Zhong Chen, Yubo Song
