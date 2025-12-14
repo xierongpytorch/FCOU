@@ -61,14 +61,14 @@ For each federated training round *t*:
 1. The server broadcasts the current global model **wₜ** to the selected clients.
 2. **Client Weight (Identify).** A target client with a forget request estimates its historical impact by comparing its cached local snapshot with **wₜ**, producing a client-level contribution score.
 3. **Data Importance (Identify).** The client computes gradients on the forget set and ranks parameters by gradient magnitude to locate the weights most influenced by the data to be removed.
-4. **Parameter Pruning (Remove).** The high-impact parameter subset is selectively pruned/edited so that the most sensitive internal traces are directly targeted.
+4. **Parameter Pruning (Remove).** The high impact parameter subset is selectively pruned/edited so that the most sensitive internal traces are directly targeted.
 5. **Knowledge Editing (Remove).** The pruned parameters are re-initialized and locally edited using the adversarial surrogates, removing both data-level and model-level remnants.
 6. **Optimize Differences (Maintain).** The client fine-tunes the edited model with drift control and KL-alignment so that predictions on retained data stay close to the global hypothesis, limiting utility loss.
 7. Clients without forget requests perform a standard local FL update.
 8. The server aggregates all local models via FedAvg to obtain **wₜ₊₁**, which immediately updates the deployed model service.
 
 This design yields **two key benefits**.  
-First, because unlearning is embedded within the training loop, FCOU avoids exposing a clean pair of “before vs. after” snapshot models, thereby reducing the pre/post side channel exploited by recent FU-specific inference and inversion attacks.  
-Second, forgetting is completed without extra post-hoc unlearning phases or additional communication rounds, making the workflow scalable to repeated and time-varying forget requests.
+First, because unlearning is embedded within the training loop, FCOU avoids exposing a clean pair of “before vs. after” snapshot models, thereby reducing the pre/post side channel exploited by recent FU specific inference and inversion attacks.  
+Second, forgetting is completed without extra post-hoc unlearning phases or additional communication rounds, making the workflow scalable to repeated and time varying forget requests.
 
 
