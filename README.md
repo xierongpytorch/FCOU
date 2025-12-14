@@ -6,7 +6,7 @@ Authors: Rong Xie, Zhong Chen, Yubo Song
 
 The PyTorch implementation is coming shortly!<be>
 
-### FCU:
+
 ![image text](https://github.com/xierongpytorch/FCOU/blob/main/PICTURE/FCU.png "FCU")
 
 **FCU** follows a *post-hoc* workflow, where forgetting is performed **after** the global model has already been trained and deployed.
@@ -51,7 +51,7 @@ With cosine similarity and image regularization, this process reconstructs input
 - In *class unlearning*, comparing prediction logits before and after unlearning allows inference of the erased class distribution.
 
 
-### FCOU:
+
 ![image text](https://github.com/xierongpytorch/FCOU/blob/main/PICTURE/FCOU.png "FCOU")
 
 **FCOU** follows an *in-training* workflow, where forgetting is performed **during** federated optimization instead of post-hoc correction.
