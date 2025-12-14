@@ -17,11 +17,8 @@ The PyTorch implementation is coming shortly!<be>
 4. An offline unlearning procedure (e.g., retraining, replay, or recalibration) is selected and executed to remove the client’s influence.
 5. A new “forgotten” model is produced and redeployed.
 
-
-### FU under Gradient Inversion Attacks (GIA)
-
-Recent studies have shown that **federated unlearning (FU) itself can introduce a new privacy vulnerability**.  
-In particular, *Gradient Inversion Attacks (GIA)* exploit the **difference between the model before and after unlearning** as a side channel to reconstruct the data that was supposed to be forgotten.
+Recent studies have shown that **FU itself can introduce a new privacy vulnerability**.  
+In particular, *GIA* exploit the **difference between the model before and after unlearning** as a side channel to reconstruct the data that was supposed to be forgotten.
 
 Following the analysis of Zhou and Zhu (2025), the attack proceeds as follows.
 
